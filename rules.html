@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Kurallar - Linwood Roleplay</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Özel CSS -->
+  <link rel="stylesheet" href="style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'dark-bg': '#0e0e0e',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0e0e0e] text-white font-sans">
+  <!-- Modern Header -->
+  <header class="modern-header sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 md:py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex space-x-4 md:space-x-8 items-center">
+          <a href="index.html" class="text-lg sm:text-xl font-bold tracking-wider">LINWOOD</a>
+          <nav class="hidden md:flex space-x-4 lg:space-x-8">
+            <a href="index.html" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base">Home</a>
+            <a href="rules.html" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base active">Rules</a>
+            <a href="market.html" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base">Market</a>
+          </nav>
+        </div>
+        <div class="hidden sm:block">
+          <a href="#" class="btn btn-primary hover-glow text-sm sm:text-base">Başvuru Yap</a>
+        </div>
+        <!-- Mobil Menü Butonu -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-white focus:outline-none">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Mobil Menü -->
+      <div id="mobile-menu" class="hidden md:hidden mt-3 pb-3">
+        <a href="index.html" class="block py-2 text-white hover:text-gray-300">Home</a>
+        <a href="rules.html" class="block py-2 text-white hover:text-gray-300 active">Rules</a>
+        <a href="market.html" class="block py-2 text-white hover:text-gray-300">Market</a>
+        <a href="#" class="block py-2 text-white hover:text-gray-300 sm:hidden mt-2">
+          <span class="btn btn-primary hover-glow text-sm block text-center">Başvuru Yap</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner Bölümü -->
+  <section class="relative h-[250px] sm:h-[300px] overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://picsum.photos/1920/1080?random=6'); filter: brightness(0.4);"></div>
+    <div class="absolute inset-0 flex items-center justify-center">
+      <div class="text-center">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-4 hero-title">Sunucu Kuralları</h1>
+        <p class="text-lg max-w-2xl mx-auto px-4">Linwood Roleplay sunucusunda keyifli bir deneyim için uymanız gereken kurallar</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ana İçerik -->
+  <section class="py-12 sm:py-16 md:py-20 content-section">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <!-- Giriş -->
+        <div class="mb-12 fade-in-up text-center">
+          <h2 class="text-2xl sm:text-3xl font-bold mb-6">Kurallara Genel Bakış</h2>
+          <p class="text-gray-300 leading-relaxed mb-6">
+            Linwood Roleplay sunucusunda, gerçekçi bir roleplay deneyimi sağlamak ve herkesin eşit şartlarda eğlenceli zaman geçirmesini sağlamak için belirli kurallara uyulması zorunludur. Bu kurallar sunucumuzun temelini oluşturur ve tüm oyuncularımız tarafından bilinmeli ve uygulanmalıdır.
+          </p>
+          <p class="text-gray-300 leading-relaxed">
+            Aşağıdaki kurallara uymayan oyuncular uyarı alabilir, geçici olarak engellenebilir veya kalıcı olarak sunucudan yasaklanabilir. Kurallarımız hakkında sorularınız varsa, Discord sunucumuzda yetkililerle iletişime geçebilirsiniz.
+          </p>
+        </div>
+
+        <!-- Genel Kurallar -->
+        <div class="glass-card p-6 mb-10 fade-in-up">
+          <div class="flex items-center mb-4">
+            <div class="feature-icon text-3xl sm:text-4xl text-white mr-4" style="width: 60px; height: 60px;">
+              <i class="fas fa-gavel"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold">Genel Kurallar</h3>
+          </div>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-start">
+              <i class="fas fa-check text-red-600 mt-1 mr-3"></i>
+              <span>Tüm oyunculara saygılı davranın. Hakaret, ayrımcılık ve taciz kesinlikle yasaktır.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-red-600 mt-1 mr-3"></i>
+              <span>Roleplay'i bozan davranışlardan kaçının (OOC konuşma, metagaming, powergaming).</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-red-600 mt-1 mr-3"></i>
+              <span>Sunucu veya oyun hatalarını kötüye kullanmayın. Bulduğunuz hataları yetkililere bildirin.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-red-600 mt-1 mr-3"></i>
+              <span>Yetkililerin talimatlarına uyun ve anlaşmazlıklarda saygılı bir şekilde iletişim kurun.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-red-600 mt-1 mr-3"></i>
+              <span>Birden fazla karakterle oynayarak ekonomik avantaj elde etmeye çalışmak yasaktır.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Roleplay Kuralları -->
+        <div class="glass-card p-6 mb-10 fade-in-up">
+          <div class="flex items-center mb-4">
+            <div class="feature-icon text-3xl sm:text-4xl text-white mr-4" style="width: 60px; height: 60px;">
+              <i class="fas fa-theater-masks"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold">Roleplay Kuralları</h3>
+          </div>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-start">
+              <i class="fas fa-check text-red-600 mt-1 mr-3"></i>
+              <span>Her zaman karakterinizin rolünde kalın. OOC (Out of Character) konuşmalarını yalnızca uygun kanallarda yapın.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-red-600 mt-1 mr-3"></i>
+              <span>Metagaming (oyun dışı bilgileri karakterinizin bilgisi olarak kullanmak) yasaktır.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-red-600 mt-1 mr-3"></i>
+              <span>Powergaming (karakterinize gerçekçi olmayan yetenekler atfetmek) yasaktır.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-red-600 mt-1 mr-3"></i>
+              <span>Karakter ölümlerinde roleplay'e uygun davranın. Öldükten sonra aynı olayı hatırlamazsınız.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-red-600 mt-1 mr-3"></i>
+              <span>Gerçekçi roleplay yapın. Karakteriniz bir süper kahraman değildir.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Trafik ve Araç Kuralları -->
+        <div class="glass-card p-6 mb-10 fade-in-up">
+          <div class="flex items-center mb-4">
+            <div class="feature-icon text-3xl sm:text-4xl text-white mr-4" style="width: 60px; height: 60px;">
+              <i class="fas fa-car"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold">Trafik ve Araç Kuralları</h3>
+          </div>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-start">
+              <i class="fas fa-check text-red-600 mt-1 mr-3"></i>
+              <span>Gerçekçi sürüş yapın. Aşırı hız ve gerçekçi olmayan manevralardan kaçının.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-red-600 mt-1 mr-3"></i>
+              <span>Araç çalma veya gasp etme gibi olaylarda mutlaka düzgün roleplay yapın.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-red-600 mt-1 mr-3"></i>
+              <span>Sürüş esnasında aşırı kaza yapmak veya kasti olarak oyuncuları rahatsız etmek yasaktır.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-red-600 mt-1 mr-3"></i>
+              <span>Araçlarınızı uygun olmayan yerlere park etmeyin.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Suç ve Polis Kuralları -->
+        <div class="glass-card p-6 fade-in-up">
+          <div class="flex items-center mb-4">
+            <div class="feature-icon text-3xl sm:text-4xl text-white mr-4" style="width: 60px; height: 60px;">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold">Suç ve Polis Kuralları</h3>
+          </div>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-start">
+              <i class="fas fa-check text-red-600 mt-1 mr-3"></i>
+              <span>Suç aktivitelerini gerçekçi bir şekilde roleplay edin. Her suç için bir motivasyon ve plan olmalıdır.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-red-600 mt-1 mr-3"></i>
+              <span>Polis memurlarına saygılı davranın, kelepçelendiğinizde veya tutuklandığınızda roleplay'i bozacak hareketler yapmayın.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-red-600 mt-1 mr-3"></i>
+              <span>RDM (Random Death Match) ve VDM (Vehicle Death Match) kesinlikle yasaktır.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-red-600 mt-1 mr-3"></i>
+              <span>Polis memurları görevlerini adil ve kurallara uygun şekilde yapmalıdır.</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-red-600 mt-1 mr-3"></i>
+              <span>Oyuncular arasındaki anlaşmazlıkları çözmek için /report komutunu kullanın ve yetkililerin müdahalesini bekleyin.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 sm:py-10 md:py-12 modern-footer">
+    <div class="container mx-auto px-4 text-center">
+      <div class="flex items-center justify-center mb-6 sm:mb-8">
+        <span class="text-2xl sm:text-3xl font-bold relative">
+          <span class="pr-2">LINWOOD</span>
+          <span class="text-base sm:text-lg font-normal text-gray-400">ROLEPLAY</span>
+        </span>
+      </div>
+      <div class="flex justify-center space-x-6 sm:space-x-8 mb-6 sm:mb-8">
+        <a href="#" class="social-icon text-xl sm:text-2xl hover:text-gray-300"><i class="fab fa-discord"></i></a>
+        <a href="#" class="social-icon text-xl sm:text-2xl hover:text-gray-300"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-icon text-xl sm:text-2xl hover:text-gray-300"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon text-xl sm:text-2xl hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+      </div>
+      <hr class="border-gray-800 mb-6 sm:mb-8">
+      <p class="text-xs sm:text-sm text-gray-500">
+        © 2025 Linwood Roleplay - Tüm Hakları Saklıdır. <br class="sm:hidden">
+        <span class="hidden sm:inline"> · </span>
+        Bu site sadece rol yapma amaçlı oluşturulmuş oyun topluluğumuza aittir.
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  <!-- Aktif sayfa için stil -->
+  <style>
+    .nav-link.active {
+      color: var(--color-primary);
+    }
+    .nav-link.active::after {
+      width: 100%;
+    }
+  </style>
+</body>
+</html>
