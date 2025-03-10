@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Başvuru - Linwood Roleplay</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Özel CSS -->
+  <link rel="stylesheet" href="style.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'dark-bg': '#0e0e0e',
+            'primary': '#e61e25',
+            'secondary': '#3b82f6',
+            'accent': '#22d3ee',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0e0e0e] text-white font-sans">
+  <!-- Modern Header -->
+  <header class="modern-header sticky top-0 z-50">
+    <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-5">
+      <div class="flex justify-between items-center">
+        <div class="flex space-x-3 md:space-x-6 lg:space-x-8 items-center">
+          <a href="index.html" class="text-lg sm:text-xl font-bold tracking-wider logo-text">LINWOOD</a>
+          <nav class="hidden md:flex space-x-3 lg:space-x-6 xl:space-x-8">
+            <a href="index.html" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base">Ana Sayfa</a>
+            <a href="rules.html" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base">Kurallar</a>
+            <a href="market.html" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base">Market</a>
+          </nav>
+        </div>
+        <div class="hidden sm:block">
+          <a href="basvuru.html" class="btn btn-primary hover-glow text-sm sm:text-base md:px-5 lg:px-6 active">Başvuru Yap</a>
+        </div>
+        <!-- Mobil Menü Butonu -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-white focus:outline-none">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Mobil Menü -->
+      <div id="mobile-menu" class="hidden md:hidden mt-3 pb-3">
+        <a href="index.html" class="block py-2 text-white hover:text-gray-300">Ana Sayfa</a>
+        <a href="rules.html" class="block py-2 text-white hover:text-gray-300">Kurallar</a>
+        <a href="market.html" class="block py-2 text-white hover:text-gray-300">Market</a>
+        <a href="basvuru.html" class="block py-2 text-white hover:text-gray-300 sm:hidden mt-2">
+          <span class="btn btn-primary hover-glow text-sm block text-center">Başvuru Yap</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Ana İçerik -->
+  <section class="py-20 md:py-28 fade-in-up">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <div class="glass-card p-8 md:p-12">
+        <div class="text-center mb-10">
+          <h1 class="text-3xl md:text-4xl font-bold mb-4 section-title-center inline-block">Başvuru Formu</h1>
+          <div class="flex justify-center">
+            <div class="feature-icon text-4xl sm:text-5xl text-white mb-6">
+              <i class="fas fa-clipboard-list"></i>
+            </div>
+          </div>
+          <p class="text-xl text-gray-300 mb-6">Sayfa Yapım Aşamasında</p>
+          
+          <div class="mt-8 flex flex-col items-center">
+            <div class="loader mb-6"></div>
+            <p class="text-gray-400">Başvuru sistemimiz yakında aktif olacaktır. Takipte kalın!</p>
+            
+            <div class="mt-10 md:mt-16 border-t border-gray-800 pt-8 w-full max-w-md mx-auto">
+              <h3 class="text-xl font-semibold mb-4">Bizi takip edin</h3>
+              <div class="flex justify-center space-x-6 sm:space-x-8">
+                <a href="#" class="social-icon-animated text-xl sm:text-2xl"><i class="fab fa-discord"></i></a>
+                <a href="#" class="social-icon-animated text-xl sm:text-2xl"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-icon-animated text-xl sm:text-2xl"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon-animated text-xl sm:text-2xl"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 sm:py-10 md:py-12 modern-footer">
+    <div class="container mx-auto px-4 text-center">
+      <div class="flex items-center justify-center mb-6 sm:mb-8">
+        <span class="text-2xl sm:text-3xl font-bold relative">
+          <span class="pr-2">LINWOOD</span>
+          <span class="text-base sm:text-lg font-normal text-gray-400">ROLEPLAY</span>
+        </span>
+      </div>
+      <div class="flex justify-center space-x-6 sm:space-x-8 mb-6 sm:mb-8">
+        <a href="#" class="social-icon-animated text-xl sm:text-2xl"><i class="fab fa-discord"></i></a>
+        <a href="#" class="social-icon-animated text-xl sm:text-2xl"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-icon-animated text-xl sm:text-2xl"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon-animated text-xl sm:text-2xl"><i class="fab fa-instagram"></i></a>
+      </div>
+      <hr class="border-gray-800 mb-6 sm:mb-8">
+      <p class="text-xs sm:text-sm text-gray-500">
+        © 2025 Linwood Roleplay - Tüm Hakları Saklıdır. <br class="sm:hidden">
+        <span class="hidden sm:inline"> · </span>
+        Bu site sadece rol yapma amaçlı oluşturulmuş oyun topluluğumuza aittir.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Butonu -->
+  <div id="back-to-top" class="back-to-top" title="Yukarı Çık">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+  
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  
+  <!-- Scroll Header -->
+  <script>
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.modern-header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+      
+      // Back to top button
+      const backToTop = document.getElementById('back-to-top');
+      if (window.scrollY > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+    
+    // Back to top functionality
+    document.getElementById('back-to-top').addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Intersection Observer ile görünüm animasyonlarını tetikleme
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    // Tüm fade-in-up elementlerini gözlemle
+    document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .fade-in, .scale-in').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

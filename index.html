@@ -16,6 +16,9 @@
         extend: {
           colors: {
             'dark-bg': '#0e0e0e',
+            'primary': '#e61e25',
+            'secondary': '#3b82f6',
+            'accent': '#22d3ee',
           }
         }
       }
@@ -28,15 +31,15 @@
     <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-5">
       <div class="flex justify-between items-center">
         <div class="flex space-x-3 md:space-x-6 lg:space-x-8 items-center">
-          <a href="index.html" class="text-lg sm:text-xl font-bold tracking-wider">LINWOOD</a>
+          <a href="index.html" class="text-lg sm:text-xl font-bold tracking-wider logo-text">LINWOOD</a>
           <nav class="hidden md:flex space-x-3 lg:space-x-6 xl:space-x-8">
-            <a href="index.html" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base active">Home</a>
-            <a href="rules.html" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base">Rules</a>
+            <a href="index.html" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base active">Ana Sayfa</a>
+            <a href="rules.html" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base">Kurallar</a>
             <a href="market.html" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base">Market</a>
           </nav>
         </div>
         <div class="hidden sm:block">
-          <a href="#" class="btn btn-primary hover-glow text-sm sm:text-base md:px-5 lg:px-6">Başvuru Yap</a>
+          <a href="basvuru.html" class="btn btn-primary hover-glow text-sm sm:text-base md:px-5 lg:px-6">Başvuru Yap</a>
         </div>
         <!-- Mobil Menü Butonu -->
         <div class="md:hidden">
@@ -47,10 +50,10 @@
       </div>
       <!-- Mobil Menü -->
       <div id="mobile-menu" class="hidden md:hidden mt-3 pb-3">
-        <a href="index.html" class="block py-2 text-white hover:text-gray-300 active">Home</a>
-        <a href="rules.html" class="block py-2 text-white hover:text-gray-300">Rules</a>
+        <a href="index.html" class="block py-2 text-white hover:text-gray-300 active">Ana Sayfa</a>
+        <a href="rules.html" class="block py-2 text-white hover:text-gray-300">Kurallar</a>
         <a href="market.html" class="block py-2 text-white hover:text-gray-300">Market</a>
-        <a href="#" class="block py-2 text-white hover:text-gray-300 sm:hidden mt-2">
+        <a href="basvuru.html" class="block py-2 text-white hover:text-gray-300 sm:hidden mt-2">
           <span class="btn btn-primary hover-glow text-sm block text-center">Başvuru Yap</span>
         </a>
       </div>
@@ -61,20 +64,22 @@
   <section class="relative h-[400px] sm:h-[500px] md:h-[600px] overflow-hidden">
     <div id="slider" class="h-full">
       <!-- Slider içeriği JavaScript ile doldurulacak -->
-      <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1500 bg-cover bg-center transform scale-105" style="background-image: url('https://picsum.photos/1920/1080?random=1')"></div>
-      <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1500 bg-cover bg-center transform scale-105" style="background-image: url('https://picsum.photos/1920/1080?random=2')"></div>
-      <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1500 bg-cover bg-center transform scale-105" style="background-image: url('https://picsum.photos/1920/1080?random=3')"></div>
+      <div class="hero-slide active bg-cover bg-center transform scale-105" style="background-image: url('https://picsum.photos/1920/1080?random=1')"></div>
+      <div class="hero-slide bg-cover bg-center transform scale-105" style="background-image: url('https://picsum.photos/1920/1080?random=2')"></div>
+      <div class="hero-slide bg-cover bg-center transform scale-105" style="background-image: url('https://picsum.photos/1920/1080?random=3')"></div>
     </div>
     
     <!-- Hero Overlay ve İçerik -->
     <div class="absolute inset-0 hero-overlay flex flex-col">
       <div class="container mx-auto px-4 py-8 flex-1 flex flex-col">
         <div class="max-w-xl mt-10 sm:mt-12 md:mt-16 fade-in-up">
-          <h1 class="hero-title text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6">Linwood Roleplay</h1>
+          <h1 class="hero-title text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6">
+            <span class="hero-title-accent">Linwood</span> Roleplay
+          </h1>
           <p class="hero-description text-base sm:text-lg md:text-xl">Linwood şehrinde gerçekçi bir roleplay deneyimi yaşayın. Karakterinizi oluşturun, meslek sahibi olun ve Linwood topluluğuna katılın.</p>
           <div class="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3">
-            <a href="#" class="btn btn-primary hover-glow text-sm sm:text-base">Hemen Başla</a>
-            <a href="#content" class="btn bg-transparent border border-white hover:bg-white hover:text-black text-sm sm:text-base">Daha Fazla</a>
+            <a href="basvuru.html" class="btn btn-primary hover-glow text-sm sm:text-base">Hemen Başla</a>
+            <a href="#content" class="btn btn-outline text-sm sm:text-base">Daha Fazla</a>
           </div>
         </div>
         <div class="mt-auto mb-10 sm:mb-16 text-center">
@@ -84,7 +89,7 @@
             <a href="#" class="social-icon text-3xl hover:text-gray-300"><i class="fab fa-twitter"></i></a>
           </div>
           <a href="#content" class="inline-block scroll-indicator">
-            <i class="fas fa-chevron-down text-2xl"></i>
+            <i class="fas fa-chevron-down text-xl"></i>
           </a>
         </div>
       </div>
@@ -102,10 +107,7 @@
           </div>
         </div>
         <div class="md:w-2/3">
-          <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 relative">
-            <span class="inline-block pr-3 relative z-10">Sistemlerimiz</span>
-            <span class="absolute left-0 bottom-0 w-20 h-1 bg-red-600"></span>
-          </h2>
+          <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 section-title">Sistemlerimiz</h2>
           <p class="text-gray-300 text-base sm:text-lg leading-relaxed">
             Linwood Roleplay, gerçekçi bir roleplay deneyimi sunmak için geliştirilmiş özel sistemlere sahiptir. 
             Ekonomi sistemi, meslekler, araç satın alma ve özelleştirme, gayrimenkul, polis ve acil servis sistemleri, 
@@ -123,10 +125,7 @@
           </div>
         </div>
         <div class="md:w-2/3">
-          <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 relative">
-            <span class="inline-block pr-3 relative z-10">Neden Burdayız</span>
-            <span class="absolute left-0 bottom-0 w-20 h-1 bg-red-600"></span>
-          </h2>
+          <h2 class="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 section-title">Neden Burdayız</h2>
           <p class="text-gray-300 text-base sm:text-lg leading-relaxed">
             Linwood Roleplay topluluğu olarak amacımız, kaliteli ve gerçekçi bir roleplay ortamı sunarak 
             oyuncularımıza benzersiz bir deneyim sağlamaktır. Deneyimli yönetim ekibimiz ve topluluk odaklı 
@@ -139,44 +138,41 @@
 
       <!-- İstatistikler -->
       <div class="py-10 sm:py-14 fade-in-up">
-        <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-10 relative inline-block">
-          <span class="relative z-10">İstatistikler</span>
-          <span class="absolute left-1/4 bottom-0 w-1/2 h-1 bg-red-600"></span>
-        </h2>
+        <h2 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-10 section-title-center">İstatistikler</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-8 mt-10 sm:mt-14">
           <!-- Karakter Sayacı -->
           <div class="counter-card hover-float">
-            <div class="text-3xl sm:text-4xl text-red-600 mb-4 sm:mb-6">
+            <div class="text-3xl sm:text-4xl text-red-600 mb-4 sm:mb-6 counter-icon">
               <i class="fas fa-user"></i>
             </div>
-            <span class="text-3xl sm:text-4xl font-bold" id="counter-characters">0</span>
+            <span class="text-3xl sm:text-4xl font-bold counter-number" id="counter-characters" data-target="1250">0</span>
             <p class="text-gray-400 mt-3 sm:mt-4 text-sm sm:text-base">Aktif Karakter</p>
           </div>
           
           <!-- Whitelist Sayacı -->
           <div class="counter-card hover-float">
-            <div class="text-3xl sm:text-4xl text-red-600 mb-4 sm:mb-6">
+            <div class="text-3xl sm:text-4xl text-red-600 mb-4 sm:mb-6 counter-icon">
               <i class="fas fa-check-circle"></i>
             </div>
-            <span class="text-3xl sm:text-4xl font-bold" id="counter-whitelist">0</span>
+            <span class="text-3xl sm:text-4xl font-bold counter-number" id="counter-whitelist" data-target="850">0</span>
             <p class="text-gray-400 mt-3 sm:mt-4 text-sm sm:text-base">Whitelist</p>
           </div>
           
           <!-- Admin Sayacı -->
           <div class="counter-card hover-float">
-            <div class="text-3xl sm:text-4xl text-red-600 mb-4 sm:mb-6">
+            <div class="text-3xl sm:text-4xl text-red-600 mb-4 sm:mb-6 counter-icon">
               <i class="fas fa-shield-alt"></i>
             </div>
-            <span class="text-3xl sm:text-4xl font-bold" id="counter-admins">0</span>
+            <span class="text-3xl sm:text-4xl font-bold counter-number" id="counter-admins" data-target="25">0</span>
             <p class="text-gray-400 mt-3 sm:mt-4 text-sm sm:text-base">Admin</p>
           </div>
           
           <!-- Araç ve Ev Sayacı -->
           <div class="counter-card hover-float">
-            <div class="text-3xl sm:text-4xl text-red-600 mb-4 sm:mb-6">
+            <div class="text-3xl sm:text-4xl text-red-600 mb-4 sm:mb-6 counter-icon">
               <i class="fas fa-car"></i>
             </div>
-            <span class="text-3xl sm:text-4xl font-bold" id="counter-properties">0</span>
+            <span class="text-3xl sm:text-4xl font-bold counter-number" id="counter-properties" data-target="3500">0</span>
             <p class="text-gray-400 mt-3 sm:mt-4 text-sm sm:text-base">Araç & Ev</p>
           </div>
         </div>
@@ -194,10 +190,10 @@
         </span>
       </div>
       <div class="flex justify-center space-x-6 sm:space-x-8 mb-6 sm:mb-8">
-        <a href="#" class="social-icon text-xl sm:text-2xl hover:text-gray-300"><i class="fab fa-discord"></i></a>
-        <a href="#" class="social-icon text-xl sm:text-2xl hover:text-gray-300"><i class="fab fa-youtube"></i></a>
-        <a href="#" class="social-icon text-xl sm:text-2xl hover:text-gray-300"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="social-icon text-xl sm:text-2xl hover:text-gray-300"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon-animated text-xl sm:text-2xl"><i class="fab fa-discord"></i></a>
+        <a href="#" class="social-icon-animated text-xl sm:text-2xl"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-icon-animated text-xl sm:text-2xl"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon-animated text-xl sm:text-2xl"><i class="fab fa-instagram"></i></a>
       </div>
       <hr class="border-gray-800 mb-6 sm:mb-8">
       <p class="text-xs sm:text-sm text-gray-500">
@@ -208,8 +204,107 @@
     </div>
   </footer>
 
+  <!-- Back to Top Butonu -->
+  <div id="back-to-top" class="back-to-top" title="Yukarı Çık">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+  
   <!-- JavaScript -->
   <script src="script.js"></script>
+  
+  <!-- Scroll Header -->
+  <script>
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.modern-header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+      
+      // Back to top button
+      const backToTop = document.getElementById('back-to-top');
+      if (window.scrollY > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+    
+    // Back to top functionality
+    document.getElementById('back-to-top').addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Sayaç animasyonu
+    function animateCounters() {
+      const counters = document.querySelectorAll('.counter-number');
+      const speed = 200; // Animasyon hızı
+      
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const increment = target / speed;
+        
+        let count = 0;
+        const updateCount = () => {
+          if (count < target) {
+            count += increment;
+            counter.innerText = Math.floor(count);
+            setTimeout(updateCount, 1);
+          } else {
+            counter.innerText = target.toLocaleString('tr-TR');
+          }
+        };
+        
+        updateCount();
+      });
+    }
+    
+    // Intersection Observer ile görünüm animasyonlarını tetikleme
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          
+          // Sayaçlar için ek kontrol
+          if (entry.target.classList.contains('counter-card')) {
+            animateCounters();
+            // Sayaçlar bir kez tetiklenince gözlemlemeyi durdur
+            observer.unobserve(entry.target);
+          }
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    // Tüm fade-in-up elementlerini gözlemle
+    document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .fade-in, .scale-in').forEach(el => {
+      observer.observe(el);
+    });
+    
+    // Sayaç kartlarını gözlemle
+    document.querySelectorAll('.counter-card').forEach(el => {
+      observer.observe(el);
+    });
+    
+    // Hero slider için gelişmiş slider
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    let currentSlide = 0;
+    
+    function changeSlide() {
+      heroSlides.forEach(slide => {
+        slide.classList.remove('active');
+      });
+      
+      currentSlide = (currentSlide + 1) % heroSlides.length;
+      heroSlides[currentSlide].classList.add('active');
+    }
+    
+    // Her 5 saniyede bir slaytı değiştir
+    setInterval(changeSlide, 5000);
+  </script>
   <!-- Aktif sayfa için stil -->
   <style>
     .nav-link.active {
