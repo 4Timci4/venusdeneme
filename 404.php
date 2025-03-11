@@ -36,7 +36,7 @@
           </nav>
         </div>
         <div class="hidden sm:block">
-          <a href="basvuru.php" class="btn btn-primary hover-glow text-sm sm:text-base md:px-5 lg:px-6">Başvuru Yap</a>
+          <a href="profile.php" class="btn btn-primary hover-glow text-sm sm:text-base md:px-5 lg:px-6">Başvuru Yap</a>
         </div>
         <!-- Mobil Menü Butonu -->
         <div class="md:hidden">
@@ -50,7 +50,7 @@
         <a href="index.php" class="block py-2 text-white hover:text-gray-300">Ana Sayfa</a>
         <a href="rules.php" class="block py-2 text-white hover:text-gray-300">Kurallar</a>
         <a href="market.php" class="block py-2 text-white hover:text-gray-300">Market</a>
-        <a href="basvuru.php" class="block py-2 text-white hover:text-gray-300 sm:hidden mt-2">
+        <a href="profile.php" class="block py-2 text-white hover:text-gray-300 sm:hidden mt-2">
           <span class="btn btn-primary hover-glow text-sm block text-center">Başvuru Yap</span>
         </a>
       </div>

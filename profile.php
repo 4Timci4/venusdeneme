@@ -2,7 +2,7 @@
 $page_title = "Profil";
 require_once 'db.php';
 require_once 'functions.php';
-require_once 'header.php';
+require_once 'header.php'; // Bu header.php artık includes/header.php'yi dahil ediyor
 
 // Oturum kontrolü - sadece giriş yapan kullanıcılar erişebilir
 require_login();
@@ -10,9 +10,6 @@ require_login();
 // Kullanıcı verilerini veritabanından çekme
 $user_id = $_SESSION['user_id'];
 $user = get_user_by_id($db, $user_id);
-
-// Kullanıcı karakterlerini çekme
-$characters = get_user_characters($db, $user_id);
 
 // Profil güncelleme işlemi
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_profile'])) {
@@ -98,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_profile'])) {
               <i class="fas fa-user"></i>
             </div>
             <h3 class="text-xl font-semibold"><?php echo htmlspecialchars($user['username']); ?></h3>
-            <p class="text-gray-400 text-sm mt-2">Üye: <?php echo date('d/m/Y', strtotime($user['registration_date'])); ?></p>
+            <p class="text-gray-400 text-sm mt-2">Üyelik Tarihi: <?php echo isset($user['registration_date']) ? date('d/m/Y', strtotime($user['registration_date'])) : '01/01/1970'; ?></p>
           </div>
         </div>
         
@@ -120,7 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_profile'])) {
             
             <div>
               <label for="birthdate" class="block text-sm font-medium text-gray-300 mb-1">Doğum Tarihi</label>
-              <input type="date" id="birthdate" value="<?php echo htmlspecialchars($user['birthdate']); ?>" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none transition" disabled>
+              <input type="text" id="birthdate" value="<?php echo isset($user['birthdate']) ? date('d/m/Y', strtotime($user['birthdate'])) : ''; ?>" class="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md focus:outline-none transition" disabled>
               <p class="text-xs text-gray-400 mt-1">Doğum tarihi değiştirilemez.</p>
             </div>
             
@@ -149,59 +146,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_profile'])) {
           </form>
         </div>
       </div>
-    </div>
-    
-    <!-- Karakterler -->
-    <div class="glass-card p-6 md:p-8">
-      <div class="flex justify-between items-center mb-6">
-        <h2 class="text-xl md:text-2xl font-bold section-title inline-block">Karakterlerim</h2>
-        <a href="basvuru.php" class="btn btn-outline hover-glow text-sm">Yeni Karakter Başvurusu</a>
-      </div>
-      
-      <?php if (empty($characters)): ?>
-      <div class="text-center py-10">
-        <div class="text-4xl text-gray-600 mb-4">
-          <i class="far fa-meh"></i>
-        </div>
-        <p class="text-gray-400">Henüz oluşturulmuş karakteriniz bulunmuyor.</p>
-        <a href="basvuru.php" class="btn btn-primary hover-glow text-sm mt-4">Karakter Başvurusu Yap</a>
-      </div>
-      <?php else: ?>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <?php foreach ($characters as $character): ?>
-            <div class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition">
-              <div class="flex justify-between items-start">
-                <h3 class="text-lg font-semibold">
-                  <?php echo htmlspecialchars($character['character_name']); ?>
-                </h3>
-                <span class="px-2 py-1 text-xs rounded 
-                  <?php 
-                    echo $character['status'] === 'approved' ? 'bg-green-900 text-green-300' : 
-                         ($character['status'] === 'rejected' ? 'bg-red-900 text-red-300' : 
-                         'bg-yellow-900 text-yellow-300'); 
-                  ?>">
-                  <?php 
-                    echo $character['status'] === 'approved' ? 'Onaylandı' : 
-                         ($character['status'] === 'rejected' ? 'Reddedildi' : 
-                         'İnceleniyor'); 
-                  ?>
-                </span>
-              </div>
-              <p class="text-gray-400 mt-2 text-sm">
-                <?php 
-                  // Karakter bilgilerinden kısa bir özet göster
-                  $info = $character['character_info'];
-                  echo htmlspecialchars(strlen($info) > 100 ? substr($info, 0, 100) . '...' : $info); 
-                ?>
-              </p>
-              <div class="mt-3 flex justify-between text-xs text-gray-500">
-                <span>Oluşturulma: <?php echo date('d/m/Y', strtotime($character['created_at'])); ?></span>
-                <a href="character.php?id=<?php echo $character['id']; ?>" class="text-primary hover:text-red-400">Detaylar</a>
-              </div>
-            </div>
-          <?php endforeach; ?>
-        </div>
-      <?php endif; ?>
     </div>
   </div>
 </section>

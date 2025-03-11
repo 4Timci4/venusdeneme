@@ -49,12 +49,29 @@ function display_error() {
   return '';
 }
 
-// Başarı mesajını göster ve temizle
+// Başarı mesajını göster ve temizle (2 saniye sonra otomatik kapanır)
 function display_success() {
   if (isset($_SESSION['success'])) {
     $success = $_SESSION['success'];
     unset($_SESSION['success']);
-    return '<div class="bg-green-500 text-white p-4 mb-4 rounded">' . $success . '</div>';
+    return '<div class="bg-green-500 text-white p-4 mb-4 rounded" id="success-alert">' . $success . '
+      <script>
+        (function() {
+          setTimeout(function() {
+            var alert = document.getElementById("success-alert");
+            if (alert) {
+              alert.style.transition = "opacity 0.5s ease";
+              alert.style.opacity = "0";
+              setTimeout(function() {
+                if (alert && alert.parentNode) {
+                  alert.parentNode.removeChild(alert);
+                }
+              }, 500);
+            }
+          }, 2000);
+        })();
+      </script>
+    </div>';
   }
   return '';
 }
@@ -94,15 +111,32 @@ function require_login() {
 
 // Kullanıcı bilgilerini getir
 function get_user_by_id($db, $user_id) {
-  $stmt = $db->prepare("SELECT id, username, email, birthdate FROM users WHERE id = ?");
+  $stmt = $db->prepare("SELECT id, username, email, birthdate, registration_date FROM users WHERE id = ?");
   $stmt->execute([$user_id]);
   return $stmt->fetch();
 }
 
-// Kullanıcının karakterlerini getir
+// Kullanıcının karakterlerini getir - artık kullanılmıyor
 function get_user_characters($db, $user_id) {
-  $stmt = $db->prepare("SELECT * FROM characters WHERE user_id = ?");
-  $stmt->execute([$user_id]);
-  return $stmt->fetchAll();
+  // Başvuru sistemi kaldırıldığı için boş dizi döndür
+  return [];
+}
+
+// Temel URL'yi döndür (alt dizinlerdeki sayfalardan kaynak dosyaları doğru çağırmak için)
+function get_base_url() {
+  $current_path = dirname($_SERVER['PHP_SELF']);
+  $path_parts = explode('/', $current_path);
+  
+  // Eğer alt dizindeyse, ana dizine dönmek için gereken path'i oluştur
+  $base_url = '';
+  $depth = count($path_parts) - 1; // -1 çünkü ilk eleman boş olabilir (URL / ile başlar)
+  
+  if ($depth > 1) { // 1'den büyükse alt dizindedir
+    for ($i = 0; $i < $depth - 1; $i++) {
+      $base_url .= '../';
+    }
+  }
+  
+  return $base_url;
 }
 ?>

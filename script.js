@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Responsive İşlemler
   setupResponsiveHandlers()
+  
+  // Başarı mesajlarını 2 saniye sonra kapat
+  setupAutoCloseAlerts()
 })
 
 // Responsive Mobil Menü Fonksiyonu
@@ -374,7 +377,7 @@ function setupResponsiveHandlers() {
     })
   }
   
-  // Mobil ağlar için sayfa performansını optimize et
+// Mobil ağlar için sayfa performansını optimize et
   if ('connection' in navigator) {
     const connection = navigator.connection
     
@@ -394,5 +397,54 @@ function setupResponsiveHandlers() {
       `
       document.head.appendChild(style)
     }
+  }
+}
+
+// Başarı mesajlarını otomatik kapatan fonksiyon
+function setupAutoCloseAlerts() {
+  // İlk kontrolü yap
+  closeSuccessAlert()
+  
+  // DOM değişikliklerini izleyen bir MutationObserver oluştur
+  const observer = new MutationObserver((mutations) => {
+    // Her değişiklikte başarı mesajı var mı kontrol et
+    closeSuccessAlert()
+  })
+  
+  // Bildirimler bölümünü seç
+  const notificationsContainer = document.querySelector('.container.max-w-7xl.mx-auto.px-4.sm\\:px-6.lg\\:px-8.mt-6')
+  
+  if (notificationsContainer) {
+    // Bildirimler bölümündeki değişiklikleri izle
+    observer.observe(notificationsContainer, {
+      childList: true, // Çocuk elementlerdeki değişiklikler
+      subtree: true    // Alt elementlerdeki değişiklikler dahil
+    })
+  }
+}
+
+// Başarı mesajını kapatma işlemi
+function closeSuccessAlert() {
+  // Başarı mesajı elementini bul (yeşil arka planlı mesaj kutusu)
+  const successAlert = document.querySelector('.bg-green-500.text-white.p-4.mb-4.rounded')
+  
+  // Eğer başarı mesajı varsa ve daha önce timeout ayarlanmamışsa
+  if (successAlert && !successAlert.dataset.timeoutSet) {
+    // Timeout ayarlandığını işaretle
+    successAlert.dataset.timeoutSet = 'true'
+    
+    // 2 saniye sonra mesajı kapat
+    setTimeout(() => {
+      // Fade-out animasyonu ekle
+      successAlert.style.transition = 'opacity 0.5s ease'
+      successAlert.style.opacity = '0'
+      
+      // Animasyon tamamlandıktan sonra elementi kaldır
+      setTimeout(() => {
+        if (successAlert.parentNode) {
+          successAlert.parentNode.removeChild(successAlert)
+        }
+      }, 500)
+    }, 2000)
   }
 }

@@ -2,7 +2,7 @@
 $page_title = "Giriş Yap";
 require_once 'db.php';
 require_once 'functions.php';
-require_once 'header.php';
+require_once 'header.php'; // Bu header.php artık includes/header.php'yi dahil ediyor
 
 // Kullanıcı zaten giriş yapmışsa profile sayfasına yönlendir
 if (is_logged_in()) {
@@ -89,12 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           Giriş Yap
         </button>
       </form>
-      
-      <div class="mt-5 text-center text-sm">
-        <p class="text-gray-400">
-          Hesabınız yok mu? <a href="register.php" class="text-primary hover:text-red-400">Kayıt Ol</a>
-        </p>
-      </div>
+    
     </div>
   </div>
 </section>
