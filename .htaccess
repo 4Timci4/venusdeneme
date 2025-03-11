@@ -1,7 +1,7 @@
 # Linwood Roleplay .htaccess Dosyası
 
 # 404 Hata Sayfası Yönlendirmesi
-ErrorDocument 404 /404.html
+ErrorDocument 404 /404.php
 
 # URL Yeniden Yazma Motoru Açık
 RewriteEngine On

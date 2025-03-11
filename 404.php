@@ -28,15 +28,15 @@
     <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-5">
       <div class="flex justify-between items-center">
         <div class="flex space-x-3 md:space-x-6 lg:space-x-8 items-center">
-          <a href="index.html" class="text-lg sm:text-xl font-bold tracking-wider">LINWOOD</a>
+          <a href="index.php" class="text-lg sm:text-xl font-bold tracking-wider">LINWOOD</a>
           <nav class="hidden md:flex space-x-3 lg:space-x-6 xl:space-x-8">
-            <a href="index.html" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base">Home</a>
-            <a href="rules.html" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base">Rules</a>
-            <a href="market.html" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base">Market</a>
+            <a href="index.php" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base">Ana Sayfa</a>
+            <a href="rules.php" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base">Kurallar</a>
+            <a href="market.php" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base">Market</a>
           </nav>
         </div>
         <div class="hidden sm:block">
-          <a href="#" class="btn btn-primary hover-glow text-sm sm:text-base md:px-5 lg:px-6">Başvuru Yap</a>
+          <a href="basvuru.php" class="btn btn-primary hover-glow text-sm sm:text-base md:px-5 lg:px-6">Başvuru Yap</a>
         </div>
         <!-- Mobil Menü Butonu -->
         <div class="md:hidden">
@@ -47,10 +47,10 @@
       </div>
       <!-- Mobil Menü -->
       <div id="mobile-menu" class="hidden md:hidden mt-3 pb-3">
-        <a href="index.html" class="block py-2 text-white hover:text-gray-300">Home</a>
-        <a href="rules.html" class="block py-2 text-white hover:text-gray-300">Rules</a>
-        <a href="market.html" class="block py-2 text-white hover:text-gray-300">Market</a>
-        <a href="#" class="block py-2 text-white hover:text-gray-300 sm:hidden mt-2">
+        <a href="index.php" class="block py-2 text-white hover:text-gray-300">Ana Sayfa</a>
+        <a href="rules.php" class="block py-2 text-white hover:text-gray-300">Kurallar</a>
+        <a href="market.php" class="block py-2 text-white hover:text-gray-300">Market</a>
+        <a href="basvuru.php" class="block py-2 text-white hover:text-gray-300 sm:hidden mt-2">
           <span class="btn btn-primary hover-glow text-sm block text-center">Başvuru Yap</span>
         </a>
       </div>
@@ -88,15 +88,15 @@
         
         <!-- Navigasyon Butonları -->
         <div class="space-y-4">
-          <a href="index.html" class="btn btn-primary px-8 py-3 hover-glow inline-flex items-center">
+          <a href="index.php" class="btn btn-primary px-8 py-3 hover-glow inline-flex items-center">
             <i class="fas fa-home mr-2"></i> Ana Sayfaya Dön
           </a>
           
           <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6">
-            <a href="rules.html" class="btn bg-transparent border border-white hover:bg-white hover:text-black text-sm sm:text-base">
+            <a href="rules.php" class="btn bg-transparent border border-white hover:bg-white hover:text-black text-sm sm:text-base">
               <i class="fas fa-scroll mr-2"></i> Kurallar
             </a>
-            <a href="market.html" class="btn bg-transparent border border-white hover:bg-white hover:text-black text-sm sm:text-base">
+            <a href="market.php" class="btn bg-transparent border border-white hover:bg-white hover:text-black text-sm sm:text-base">
               <i class="fas fa-shopping-cart mr-2"></i> Market
             </a>
           </div>

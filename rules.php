@@ -31,15 +31,15 @@
     <div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-5">
       <div class="flex justify-between items-center">
         <div class="flex space-x-3 md:space-x-6 lg:space-x-8 items-center">
-          <a href="index.html" class="text-lg sm:text-xl font-bold tracking-wider logo-text">LINWOOD</a>
+          <a href="index.php" class="text-lg sm:text-xl font-bold tracking-wider logo-text">LINWOOD</a>
           <nav class="hidden md:flex space-x-3 lg:space-x-6 xl:space-x-8">
-            <a href="index.html" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base">Ana Sayfa</a>
-            <a href="rules.html" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base active">Kurallar</a>
-            <a href="market.html" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base">Market</a>
+            <a href="index.php" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base">Ana Sayfa</a>
+            <a href="rules.php" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base active">Kurallar</a>
+            <a href="market.php" class="nav-link text-white hover:text-gray-300 text-sm lg:text-base">Market</a>
           </nav>
         </div>
         <div class="hidden sm:block">
-          <a href="basvuru.html" class="btn btn-primary hover-glow text-sm sm:text-base md:px-5 lg:px-6">Başvuru Yap</a>
+          <a href="basvuru.php" class="btn btn-primary hover-glow text-sm sm:text-base md:px-5 lg:px-6">Başvuru Yap</a>
         </div>
         <!-- Mobil Menü Butonu -->
         <div class="md:hidden">
@@ -50,10 +50,10 @@
       </div>
       <!-- Mobil Menü -->
       <div id="mobile-menu" class="hidden md:hidden mt-3 pb-3">
-        <a href="index.html" class="block py-2 text-white hover:text-gray-300">Ana Sayfa</a>
-        <a href="rules.html" class="block py-2 text-white hover:text-gray-300 active">Kurallar</a>
-        <a href="market.html" class="block py-2 text-white hover:text-gray-300">Market</a>
-        <a href="basvuru.html" class="block py-2 text-white hover:text-gray-300 sm:hidden mt-2">
+        <a href="index.php" class="block py-2 text-white hover:text-gray-300">Ana Sayfa</a>
+        <a href="rules.php" class="block py-2 text-white hover:text-gray-300 active">Kurallar</a>
+        <a href="market.php" class="block py-2 text-white hover:text-gray-300">Market</a>
+        <a href="basvuru.php" class="block py-2 text-white hover:text-gray-300 sm:hidden mt-2">
           <span class="btn btn-primary hover-glow text-sm block text-center">Başvuru Yap</span>
         </a>
       </div>
