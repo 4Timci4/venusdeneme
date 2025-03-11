@@ -1,0 +1,78 @@
+/* Linwood Roleplay - İkon Stilleri */
+
+/* Responsive Özellik İkonları */
+.feature-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  box-shadow: 0 10px 20px rgba(230, 30, 37, 0.3);
+  margin-bottom: 1.5rem;
+  z-index: 1;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.feature-icon:hover {
+  transform: rotate(5deg) scale(1.05);
+  box-shadow: 0 15px 30px rgba(230, 30, 37, 0.4);
+}
+
+.feature-icon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent 25%, rgba(255, 255, 255, 0.3) 50%, transparent 75%);
+  background-size: 200% 200%;
+  animation: gradientAnimation 6s linear infinite;
+  z-index: -1;
+}
+
+.feature-icon i {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  transition: transform var(--transition-normal);
+}
+
+.feature-icon:hover i {
+  transform: scale(1.1);
+}
+
+/* Mavi Özellik İkonu */
+.feature-icon-blue {
+  background: var(--gradient-secondary);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+}
+
+.feature-icon-blue:hover {
+  box-shadow: 0 15px 30px rgba(59, 130, 246, 0.4);
+}
+
+/* Yeşil Özellik İkonu */
+.feature-icon-green {
+  background: linear-gradient(135deg, var(--color-success) 0%, #059669 100%);
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+}
+
+.feature-icon-green:hover {
+  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
+}
+
+/* Responsive Uyarlamalar */
+@media (max-width: 768px) {
+  .feature-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+  }
+}

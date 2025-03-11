@@ -1,0 +1,53 @@
+/* Linwood Roleplay - Değişkenler */
+
+/* Responsive Değişkenler */
+:root {
+  --header-height: 150px;
+  --header-height-mobile: 54px;
+}
+
+/* Değişkenler */
+:root {
+  /* Ana Renkler */
+  --color-primary: #e61e25;
+  --color-primary-hover: #c81a20;
+  --color-secondary: #3b82f6;
+  --color-secondary-hover: #2563eb;
+  --color-accent: #22d3ee;
+  --color-accent-hover: #06b6d4;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  
+  /* Koyu Tema Renkleri */
+  --color-dark: #0e0e0e;
+  --color-dark-lighter: #191919;
+  --color-dark-card: rgba(25, 25, 25, 0.7);
+  --color-dark-nav: rgba(10, 10, 10, 0.9);
+  --color-dark-footer: linear-gradient(to top, #000000, rgba(14, 14, 14, 0.95));
+  
+  /* Metin Renkleri */
+  --color-text: #ffffff;
+  --color-text-muted: #9ca3af;
+  --color-text-light: #f3f4f6;
+  --color-text-link: #38bdf8;
+  
+  /* Gradient Renkleri */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary), #ff3b30);
+  --gradient-secondary: linear-gradient(135deg, var(--color-secondary), #4f46e5);
+  --gradient-accent: linear-gradient(135deg, var(--color-accent), #0ea5e9);
+  --gradient-card: linear-gradient(145deg, rgba(30, 30, 30, 0.7), rgba(15, 15, 15, 0.8));
+  --gradient-glass: linear-gradient(120deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+  
+  /* Geçiş Süreleri */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Gölgeler */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 5px 15px -10px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 15px rgba(230, 30, 37, 0.5);
+  --shadow-glow-blue: 0 0 15px rgba(59, 130, 246, 0.5);
+}

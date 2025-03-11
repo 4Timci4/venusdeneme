@@ -1,0 +1,116 @@
+/* Linwood Roleplay - Header ve Navigasyon Stilleri */
+
+/* Modern Responsive Header */
+.modern-header {
+  background: var(--color-dark-nav);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  max-height: var(--header-height);
+  transition: all 0.3s ease;
+}
+
+.modern-header.scrolled {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background: rgba(0, 0, 0, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 640px) {
+  .modern-header {
+    max-height: var(--header-height-mobile);
+  }
+}
+
+/* Logo Efekti */
+.logo-text {
+  background: linear-gradient(90deg, #fff, #e61e25);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 3s linear infinite;
+}
+
+/* Navbar Link Animasyonu */
+.nav-link {
+  position: relative;
+  transition: color var(--transition-fast);
+  padding: 0.5rem 0;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--color-primary);
+  transition: width var(--transition-normal), background-color var(--transition-normal);
+  transform-origin: left;
+}
+
+.nav-link:hover {
+  color: var(--color-text-light);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  background-color: var(--color-primary);
+}
+
+.nav-link.active {
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 100%;
+  background-color: var(--color-primary);
+  height: 3px;
+}
+
+/* Mobil Menü Animasyonu */
+#mobile-menu {
+  transition: max-height var(--transition-normal), opacity var(--transition-normal), transform var(--transition-normal);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+}
+
+#mobile-menu.show {
+  max-height: 300px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Menü Butonu Animasyonu */
+#menu-toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color var(--transition-normal);
+}
+
+#menu-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#menu-toggle i {
+  transition: transform var(--transition-normal);
+}
+
+#menu-toggle.open i.fa-bars {
+  transform: rotate(90deg);
+  display: none;
+}
+
+#menu-toggle:not(.open) i.fa-times {
+  display: none;
+}

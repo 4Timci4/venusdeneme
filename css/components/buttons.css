@@ -1,0 +1,116 @@
+/* Linwood Roleplay - Buton Stilleri */
+
+/* Modern Responsive Butonlar */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.7rem 1.35rem;
+  border-radius: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  min-height: 44px; /* Dokunmatik ekranlar için minimum 44px dokunma alanı */
+  z-index: 1;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  transition: all 0.1s;
+}
+
+@media (max-width: 640px) {
+  .btn {
+    padding: 0.6rem 1.2rem;
+    min-width: 100px;
+  }
+}
+
+/* Birincil Buton */
+.btn-primary {
+  background: var(--gradient-primary);
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s ease infinite;
+  color: white;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 70%);
+  transform: translateX(-100%);
+  transition: transform 0.8s var(--transition-slow);
+  z-index: -1;
+}
+
+.btn-primary:hover::before {
+  transform: translateX(100%);
+}
+
+/* İkincil Buton */
+.btn-secondary {
+  background: var(--gradient-secondary);
+  background-size: 200% 200%;
+  animation: gradientAnimation 5s ease infinite;
+  color: white;
+}
+
+.btn-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 70%);
+  transform: translateX(-100%);
+  transition: transform 0.8s var(--transition-slow);
+  z-index: -1;
+}
+
+.btn-secondary:hover::before {
+  transform: translateX(100%);
+}
+
+/* Transparan Buton */
+.btn-outline {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  color: white;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.btn-outline::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  width: 0;
+  height: calc(100% + 4px);
+  background: rgba(255, 255, 255, 0.1);
+  transition: width 0.4s var(--transition-slow);
+  z-index: -1;
+}
+
+.btn-outline:hover {
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-outline:hover::after {
+  width: calc(100% + 4px);
+}

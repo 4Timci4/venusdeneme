@@ -1,0 +1,25 @@
+/* Linwood Roleplay - Modern Stiller */
+/* Modüler CSS yapısı */
+
+/* Değişkenleri içe aktar */
+@import 'variables.css';
+
+/* Temel stilleri içe aktar */
+@import 'base.css';
+
+/* Animasyonları içe aktar */
+@import 'animations.css';
+
+/* Bileşenleri içe aktar */
+@import 'components/buttons.css';
+@import 'components/cards.css';
+@import 'components/header.css';
+@import 'components/footer.css';
+@import 'components/heroes.css';
+@import 'components/icons.css';
+
+/* Yardımcı stilleri içe aktar */
+@import 'utilities.css';
+
+/* Responsive düzenlemeleri içe aktar */
+@import 'responsive.css';

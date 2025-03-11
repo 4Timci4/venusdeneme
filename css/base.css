@@ -1,0 +1,75 @@
+/* Linwood Roleplay - Temel Stiller */
+
+/* Google Fonts - Poppins (Preload ile optimize edilmiş) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Genel Stiller */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', 'Roboto', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  background-color: var(--color-dark);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+*:focus {
+  outline: 2px solid rgba(230, 30, 37, 0.5);
+  outline-offset: 2px;
+}
+
+/* Gelişmiş Yapışkan Footer */
+.sticky-footer-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sticky-footer-content {
+  flex: 1;
+}
+
+/* Tipografi İyileştirmeleri */
+.text-gradient {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.text-shadow-lg {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.text-outline {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Accent Title */
+.accent-title {
+  position: relative;
+  padding-left: 1rem;
+  font-weight: 700;
+}
+
+.accent-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
