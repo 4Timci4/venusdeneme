@@ -34,8 +34,12 @@ Linwood Roleplay, FiveM tabanlı bir roleplay sunucusu için tasarlanmış moder
 ├── index.html            # Ana sayfa
 ├── rules.html            # Kurallar sayfası
 ├── market.html           # Market sayfası
+├── basvuru.html          # Başvuru sayfası
+├── 404.html              # Hata sayfası
 ├── style.css             # Özel CSS stilleri
 ├── script.js             # JavaScript kodları
+├── .htaccess             # Apache sunucu yapılandırması
+├── LICENSE               # Lisans dosyası
 ├── img/                  # Görseller
 │   ├── icons/            # İkonlar
 │   ├── logos/            # Logolar
@@ -63,6 +67,16 @@ Linwood Roleplay, FiveM tabanlı bir roleplay sunucusu için tasarlanmış moder
 - Özel araçlar
 - Özel mülkler
 - Ödeme bilgileri
+
+### 4. Başvuru Sayfası (basvuru.html)
+- Sunucu başvuru formu
+- Karakter bilgileri girişi
+- Başvuru koşulları
+- Whitelist sistemi
+
+### 5. Hata Sayfası (404.html)
+- Sayfa bulunamadı bildirimi
+- Ana sayfaya dönüş bağlantısı
 
 ## 🚀 Kurulum ve Çalıştırma
 

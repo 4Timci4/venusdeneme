@@ -53,7 +53,7 @@
         <a href="index.html" class="block py-2 text-white hover:text-gray-300">Ana Sayfa</a>
         <a href="rules.html" class="block py-2 text-white hover:text-gray-300">Kurallar</a>
         <a href="market.html" class="block py-2 text-white hover:text-gray-300">Market</a>
-        <a href="basvuru.html" class="block py-2 text-white hover:text-gray-300 sm:hidden mt-2">
+        <a href="basvuru.html" class="block py-2 text-white hover:text-gray-300 sm:hidden mt-2 active">
           <span class="btn btn-primary hover-glow text-sm block text-center">Başvuru Yap</span>
         </a>
       </div>
@@ -120,37 +120,12 @@
   <div id="back-to-top" class="back-to-top" title="Yukarı Çık">
     <i class="fas fa-arrow-up"></i>
   </div>
-  
+
   <!-- JavaScript -->
   <script src="script.js"></script>
-  
-  <!-- Scroll Header -->
+
+  <!-- Intersection Observer Script -->
   <script>
-    window.addEventListener('scroll', function() {
-      const header = document.querySelector('.modern-header');
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-      
-      // Back to top button
-      const backToTop = document.getElementById('back-to-top');
-      if (window.scrollY > 300) {
-        backToTop.classList.add('visible');
-      } else {
-        backToTop.classList.remove('visible');
-      }
-    });
-    
-    // Back to top functionality
-    document.getElementById('back-to-top').addEventListener('click', function() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-    
     // Intersection Observer ile görünüm animasyonlarını tetikleme
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -160,7 +135,7 @@
       });
     }, { threshold: 0.1 });
     
-    // Tüm fade-in-up elementlerini gözlemle
+    // Tüm animasyonlu elementleri gözlemle
     document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .fade-in, .scale-in').forEach(el => {
       observer.observe(el);
     });

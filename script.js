@@ -346,12 +346,33 @@ function setupResponsiveHandlers() {
           header.style.boxShadow = 'none'
         }
         
+        // Back to top button
+        const backToTop = document.getElementById('back-to-top')
+        if (backToTop) {
+          if (lastScrollPosition > 300) {
+            backToTop.classList.add('visible')
+          } else {
+            backToTop.classList.remove('visible')
+          }
+        }
+        
         ticking = false
       })
       
       ticking = true
     }
   })
+  
+  // Back to top functionality
+  const backToTop = document.getElementById('back-to-top')
+  if (backToTop) {
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    })
+  }
   
   // Mobil ağlar için sayfa performansını optimize et
   if ('connection' in navigator) {

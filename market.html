@@ -61,12 +61,14 @@
   </header>
 
   <!-- Banner Bölümü -->
-  <section class="relative h-[250px] sm:h-[300px] overflow-hidden">
+  <section class="relative h-[250px] sm:h-[300px] md:h-[350px] overflow-hidden">
     <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://picsum.photos/1920/1080?random=7'); filter: brightness(0.4); transform: scale(1.05);"></div>
     <div class="absolute inset-0 flex items-center justify-center">
-      <div class="text-center">
-        <h1 class="text-4xl sm:text-5xl font-bold mb-4 hero-title text-gradient">Market</h1>
-        <p class="text-lg max-w-2xl mx-auto px-4">Sunucumuzdaki özel ürünleri keşfedin</p>
+      <div class="text-center flex flex-col items-center justify-center h-full">
+        <h1 class="text-4xl sm:text-5xl font-bold mb-4 hero-title">
+          <span class="hero-title-accent">Market</span>
+        </h1>
+        <p class="hero-description text-lg max-w-2xl mx-auto px-4">Sunucumuzdaki özel ürünleri keşfedin</p>
       </div>
     </div>
   </section>
@@ -372,68 +374,9 @@
 
   <!-- JavaScript -->
   <script src="script.js"></script>
-  
-  <!-- Scroll Header -->
-  <script>
-    window.addEventListener('scroll', function() {
-      const header = document.querySelector('.modern-header');
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-      
-      // Back to top button
-      const backToTop = document.getElementById('back-to-top');
-      if (window.scrollY > 300) {
-        backToTop.classList.add('visible');
-      } else {
-        backToTop.classList.remove('visible');
-      }
-    });
-    
-    // Back to top functionality
-    document.getElementById('back-to-top').addEventListener('click', function() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-    
-    // Intersection Observer ile görünüm animasyonlarını tetikleme
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-    
-    // Tüm animasyonlu elementleri gözlemle
-    document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .fade-in, .scale-in').forEach(el => {
-      observer.observe(el);
-    });
-    
-    // Hover efektleri için özel animasyonlar
-    document.querySelectorAll('.premium-card').forEach(card => {
-      card.addEventListener('mouseenter', function() {
-        this.classList.add('border-pulse');
-      });
-      
-      card.addEventListener('mouseleave', function() {
-        this.classList.remove('border-pulse');
-      });
-    });
-  </script>
-  <!-- Aktif sayfa için stil -->
+
+  <!-- Stil -->
   <style>
-    .nav-link.active {
-      color: var(--color-primary);
-    }
-    .nav-link.active::after {
-      width: 100%;
-    }
-    
     .premium-card {
       position: relative;
       z-index: 1;
