@@ -109,6 +109,22 @@ function require_login() {
   }
 }
 
+// Kullanıcının admin olup olmadığını kontrol et
+function is_admin() {
+  return isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === true;
+}
+
+// Sadece admin kullanıcıların erişimine izin ver
+function require_admin() {
+  require_login(); // Önce giriş yapmış olma kontrolü
+  
+  if (!is_admin()) {
+    set_error('Bu sayfaya erişim yetkiniz bulunmamaktadır. Sadece yöneticiler erişebilir.');
+    redirect('profile.php');
+    exit;
+  }
+}
+
 // Kullanıcı bilgilerini getir
 function get_user_by_id($db, $user_id) {
   $stmt = $db->prepare("SELECT id, username, email, birthdate, registration_date FROM users WHERE id = ?");

@@ -77,8 +77,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_profile'])) {
 ?>
 
 <section class="py-12 sm:py-16 fade-in-up">
-  <div class="container mx-auto px-4 max-w-4xl">
-    <div class="glass-card p-6 md:p-8 mb-8">
+  <div class="container mx-auto px-4 max-w-7xl">
+    <div class="flex flex-col md:flex-row gap-6">
+      <!-- Sidebar -->
+      <div class="md:w-1/4 lg:w-1/5 mb-6 md:mb-0">
+        <div class="glass-card p-4 md:p-6">
+          <!-- Kullanıcı Bilgisi -->
+          <div class="text-center mb-6">
+            <div class="text-4xl mb-3 text-primary">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <h3 class="text-lg font-semibold"><?php echo htmlspecialchars($user['username']); ?></h3>
+            <p class="text-gray-400 text-sm mt-2">
+              <?php if (is_admin()): ?>
+                <span class="bg-primary px-2 py-0.5 rounded text-white text-xs">Yönetici</span>
+              <?php else: ?>
+                Üye
+              <?php endif; ?>
+            </p>
+          </div>
+          
+          <!-- Sidebar Menü -->
+          <div class="space-y-2">
+            <a href="profile.php" class="sidebar-item flex items-center p-3 rounded-md bg-gray-800 text-white transition-colors">
+              <i class="fas fa-user mr-3 w-5 text-center"></i>
+              <span>Profil</span>
+            </a>
+            <?php if (is_admin()): ?>
+            <a href="player_stats.php" class="sidebar-item flex items-center p-3 rounded-md bg-transparent text-white transition-colors">
+              <i class="fas fa-chart-bar mr-3 w-5 text-center"></i>
+              <span>Oyuncu İstatistikleri</span>
+            </a>
+            <?php endif; ?>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Ana içerik -->
+      <div class="md:w-3/4 lg:w-4/5">
+        <div class="glass-card p-6 md:p-8 mb-8">
       <div class="text-center mb-6">
         <h1 class="text-2xl md:text-3xl font-bold mb-3 section-title-center inline-block">Profil Bilgileri</h1>
         <div class="flex justify-center">

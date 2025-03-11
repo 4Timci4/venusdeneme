@@ -11,7 +11,8 @@ try {
       password VARCHAR(255) NOT NULL,
       birthdate DATE NOT NULL,
       registration_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-      last_login TIMESTAMP NULL
+      last_login TIMESTAMP NULL,
+      is_admin TINYINT(1) NOT NULL DEFAULT 0
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
   ");
   

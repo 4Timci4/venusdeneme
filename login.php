@@ -34,15 +34,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         // Kullanıcı bulunduysa şifreyi doğrula
         if ($user && password_verify($password, $user['password'])) {
+          // Kullanıcının yönetici durumunu kontrol et
+          $admin_check = $db->prepare("SELECT is_admin FROM users WHERE id = ?");
+          $admin_check->execute([$user['id']]);
+          $admin_result = $admin_check->fetch();
+          
           // Giriş başarılı - oturum oluştur
           $_SESSION['user_id'] = $user['id'];
           $_SESSION['username'] = $user['username'];
+          $_SESSION['is_admin'] = ($admin_result && $admin_result['is_admin'] == 1) ? true : false;
           
           // Son giriş zamanını güncelle
           $update_stmt = $db->prepare("UPDATE users SET last_login = CURRENT_TIMESTAMP WHERE id = ?");
           $update_stmt->execute([$user['id']]);
           
-          set_success('Başarıyla giriş yaptınız!');
+          set_success('Başarıyla giriş yaptınız!' . ($_SESSION['is_admin'] ? ' (Yönetici yetkisiyle)' : ''));
           redirect('profile.php');
         } else {
           // Giriş başarısız
